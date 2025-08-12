@@ -66,9 +66,25 @@ function mapWith(array, callback) {}
  * or any operation that you can put into a function.
  */
 
-function reduce(array, callback, initialValue) {}
+// function reduce(array, callback, initialValue) {
+//     let accumulator = initialValue;
+//     for (let i = 0; i < array.length; i++) {
+//         accumulator = callback(accumulator,array[i]);       
+//     }
+//   return accumulator  
+// }
 
-// write your own test cases!
+
+// // write your own test cases!
+// const arr = [1, 2, 3, 4, 5];
+
+// function addAll (num1, num2) {
+//     return num1 + num2; 
+// }
+
+// console.log(reduce(arr, addAll, 0))
+
+
 
 /**
  * Challenge 7:
@@ -78,7 +94,67 @@ function reduce(array, callback, initialValue) {}
  * BONUS: Use reduce!
  */
 
-function intersection(arrays) {}
+
+function intersection1(arrays) {
+    let result = arrays.pop(); // result is 3rd subarr, removes 3rd subarray from arrays
+    // console.log(result); // <- For us to check what Cynthia's code does
+    // console.log(arrays); // <- For us to check what Cynthia's code does 
+    // let newArr = [];
+    // while arrays still has length
+    while (arrays.length) { // while array of arrays still has length
+      let currArr = arrays.pop(); // currArr is 2nd subarr
+    //   console.log(currArr);// <- For us to check what Cynthia's code does
+    //   console.log(arrays); // <- For us to check what Cynthia's code does
+      const newArr = [];
+      currArr.filter( (el) => { //filter el in currArr that are included in result array
+      if ( result.includes(el) ) newArr.push(el); // push only included el into newArr
+     }) 
+     result = newArr; //reassign result subarr to newArr
+    }
+   return result;
+}
+
+
+
+const arrays = [ [5, 10, 15, 20], [15, 88, 1, 5, 7], [1, 10, 15, 5, 20] ];
+
+// console.log(intersection(arrays)); // should log: [5, 15]
+
+console.log(intersection1(arrays));
+
+
+// function intersection(arrays) {
+//   let result = arrays[0];
+//   let newArr = [];
+  
+//   function nextArray(input) {
+//     return input
+//   }
+
+//   for(let i = 1; i < arrays.length; i++){
+//     for (let j = 0; j < arrays[i].length; j++)
+//     result = result.filter(function (j) {
+//        if (result.includes(j) === true) {
+//         newArr.push(j);
+//         console.log(newArr);
+//     };
+//     result = newArr;
+//   })
+//     // nextArray[i]([j]))
+//   }
+//   return result;
+// }
+
+// ////////////////////
+// function intersection(arrays) {
+//     for (let i = 1; i < arrays.length; i++){
+//       for (let j = 0; j < arrays[i].length; j++){
+        
+//       }
+//     }
+// }
+
+// array[1]
 
 // console.log(
 //   intersection([
