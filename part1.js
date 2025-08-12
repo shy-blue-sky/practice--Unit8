@@ -42,23 +42,9 @@ function map(array, callback) {}
  * the callback on each element of the array. forEach does not return anything.
  */
 
-// function forEach(array, callback) {
-//     let tempArr = [];
-//     for (let i =0; i<array.length; i++) {
-//         tempArr.push(callback(array[i]));
-//     }
+function forEach(array, callback) {}
 
-// }
-
-// // write your own test cases!
-
-// const arrEach = [2, 3, 4];
-// function cb (n) {
-//     return n+1;
-// }
-
-// console.log(forEach(arrEach, cb))
-
+// write your own test cases!
 
 /**
  * Challenge 5:
@@ -80,24 +66,9 @@ function mapWith(array, callback) {}
  * or any operation that you can put into a function.
  */
 
-// function reduce(array, callback, initialValue) {
-//     let total = initialValue;
-//     for (let i =0; i<array.length; i++) {
-//         total = callback(array[i]);
-//     }
-//     return total;
-// }
+function reduce(array, callback, initialValue) {}
 
-// function addEl (num) {
-//     let sum = 0;
-//     sum += num;
-// }
-
-// // write your own test cases!
-
-// const arr = [1, 2, 3];
-
-// console.log(reduce(arr, addEl, 0));
+// write your own test cases!
 
 /**
  * Challenge 7:
